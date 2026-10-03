@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Jen! 🎂💕</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= PASSWORD ================= -->
+
+    <div id="passwordScreen">
+
+        <div class="password-box">
+
+            <div class="lock">🔐</div>
+
+            <h1>Birthday Surprise 💕</h1>
+
+            <p>
+                Enter the password to open your surprise 🎂
+            </p>
+
+            <input
+                type="password"
+                id="passwordInput"
+                class="password-input"
+                placeholder="Enter password"
+                onkeydown="if(event.key === 'Enter') checkPassword()"
+            >
+
+            <button class="password-btn" onclick="checkPassword()">
+                💗 Enter
+            </button>
+
+            <div id="errorMessage" class="error">
+                ❌ Wrong password. Try again.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= BIRTHDAY PAGE ================= -->
+
+    <div id="birthdayPage">
+
+        <!-- Floating hearts -->
+
+        <div class="heart">❤️</div>
+        <div class="heart">💕</div>
+        <div class="heart">💗</div>
+        <div class="heart">❤️</div>
+
+
+        <div class="container">
+
+            <div class="flowers">
+                🌹🌹🌹
+            </div>
+
+            <h1>
+                Happy Birthday, Jen! 🎂💕
+            </h1>
+
+            <p class="subtitle">
+                To a wonderful girl who deserves all the happiness in the world ✨
+            </p>
+
+
+            <!-- ================= MUSIC ================= -->
+
+            <div class="card">
+
+                <h2>
+                    🎵 Birthday Music 🎵
+                </h2>
+
+                <div class="music-box">
+
+                    <audio id="birthdayMusic" loop>
+                        <source src="Happy Birthday song [_z-1fTlSDF0].mp3" type="audio/mpeg">
+                        Your browser does not support audio.
+                    </audio>
+
+                    <button class="music-btn" onclick="toggleMusic()">
+                        🎶 Play Happy Birthday
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= PHOTOS ================= -->
+
+            <div class="card">
+
+                <h2>📸</h2>
+
+                <p>
+                    Click a photo to make it bigger.
+                </p>
+
+                <div class="photos">
+
+                    <img
+                        src="photo1.jpg"
+                        class="photo"
+                        onclick="openPhoto(this.src)"
+                        alt="Photo 1"
+                    >
+
+                    <img
+                        src="photo2.jpg"
+                        class="photo"
+                        onclick="openPhoto(this.src)"
+                        alt="Photo 2"
+                    >
+
+                    <img
+                        src="photo3.jpg"
+                        class="photo"
+                        onclick="openPhoto(this.src)"
+                        alt="Photo 3"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= LETTER ================= -->
+
+            <div class="card letter">
+
+                <h2>💌</h2>
+
+                <p>
+                    It feels like just yesterday when you were still so young,
+                    and now you're really becoming a young woman. Time really
+                    goes by so fast.
+                </p>
+
+                <br>
+
+                <p>
+                    Always remember that life doesn't have to be rushed.
+                    Take your time, enjoy every moment, and always take care
+                    of yourself and your mom.
+                </p>
+
+                <br>
+
+                <p>
+                    Whenever you have a problem, you can always come to me
+                    and Jerald. You are already like a sister to us.
+                    I'm really happy that I became close to you over the years.
+                    Honestly, I've come to see you as a little sister.
+                </p>
+
+                <br>
+
+                <p>
+                    Someday, I hope I'll also be able to help you with the
+                    problems you face. Don't worry because we're always here
+                    for you. Never be shy to tell us your stories or share
+                    what's bothering you.
+                </p>
+
+                <br>
+
+                <p>
+                    Always remember that there are still people who love and
+                    care about you. So keep fighting and never give up when
+                    life becomes difficult.
+                </p>
+
+                <br>
+
+                <p>
+                    When you're tired, allow yourself to rest. You don't have
+                    to carry everything by yourself. If something is bothering
+                    you, please talk to someone you trust and let them be there
+                    for you.
+                </p>
+
+                <br>
+
+                <p>
+                    I'm sorry if I always talk to you sometimes like I'm your
+                    mom. It's just because I don't want anything bad to happen
+                    to you. I care about you a lot.
+                </p>
+
+                <br>
+
+                <p>
+                    This message became really long. I stayed up working on
+                    this code just for you, although I didn't even make it
+                    until 12:00. 😓 There were still so many errors earlier!
+                </p>
+
+                <br>
+
+                <p>
+                    But I really hope you like this little surprise.
+                    Always remember that we're here for you.
+                </p>
+
+                <br>
+
+                <p>
+                    <b>
+                        Happy Birthday, Jen! 🎂🌹
+                    </b>
+
+                    May you grow stronger and kinder.
+                    Keep going, keep smiling, and always take care of yourself.
+                </p>
+
+                <p class="signature">
+                    With love and care,<br>
+                    MARLEE 🤪
+                </p>
+
+            </div>
+
+
+            <div class="flower-bottom">
+                🌹🌹🌹🌹🌹
+            </div>
+
+
+            <footer>
+                PARA SA BATANG MAKULIT JENTOT
+            </footer>
+
+        </div>
+
+
+        <!-- ================= PHOTO VIEWER ================= -->
+
+        <div
+            class="photo-viewer"
+            id="photoViewer"
+            onclick="closePhoto()"
+        >
+
+            <span class="close">&times;</span>
+
+            <img
+                id="bigPhoto"
+                src=""
+                alt="Large Photo"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

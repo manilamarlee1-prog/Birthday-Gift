@@ -1,0 +1,530 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #fff0f5,
+            #ffe0eb
+        );
+
+    color: #7a1638;
+    text-align: center;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   PASSWORD SCREEN
+========================================= */
+
+#passwordScreen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #fff0f5,
+            #ffe0eb
+        );
+}
+
+
+.password-box {
+    width: 100%;
+    max-width: 380px;
+
+    padding: 35px 25px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 2px solid #ffb1c9;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 35px rgba(160, 30, 80, 0.25);
+}
+
+
+.password-box .lock {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+
+.password-box h1 {
+    font-size: 28px;
+
+    color: #d41452;
+
+    margin-bottom: 10px;
+}
+
+
+.password-box p {
+    color: #8d3153;
+
+    margin-bottom: 20px;
+}
+
+
+.password-input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #ffb1c9;
+
+    border-radius: 25px;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    margin-bottom: 15px;
+}
+
+
+.password-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: #d41452;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+.password-btn:hover {
+    background: #a90d3e;
+}
+
+
+.error {
+    color: #d41452;
+
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    display: none;
+}
+
+
+/* =========================================
+   BIRTHDAY PAGE
+========================================= */
+
+#birthdayPage {
+    display: none;
+}
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.heart {
+    position: fixed;
+
+    bottom: -20px;
+
+    font-size: 25px;
+
+    animation: float 7s linear infinite;
+
+    opacity: 0.7;
+
+    z-index: 0;
+}
+
+
+.heart:nth-child(1) {
+    left: 10%;
+    animation-delay: 1s;
+}
+
+
+.heart:nth-child(2) {
+    left: 30%;
+    animation-delay: 3s;
+}
+
+
+.heart:nth-child(3) {
+    left: 55%;
+    animation-delay: 0s;
+}
+
+
+.heart:nth-child(4) {
+    left: 80%;
+    animation-delay: 2s;
+}
+
+
+@keyframes float {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 35px 20px;
+}
+
+
+/* =========================================
+   FLOWERS
+========================================= */
+
+.flowers {
+    font-size: 75px;
+
+    margin-bottom: 5px;
+
+    animation:
+        flowerMove 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes flowerMove {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+h1 {
+    font-size: 45px;
+
+    color: #d41452;
+
+    text-shadow:
+        2px 2px 8px #ff9fbd;
+}
+
+
+.subtitle {
+    font-size: 20px;
+
+    margin: 10px 0 25px;
+
+    color: #8d3153;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+    background: rgba(255, 255, 255, 0.85);
+
+    border-radius: 25px;
+
+    padding: 30px 20px;
+
+    margin: 25px auto;
+
+    box-shadow:
+        0 10px 30px rgba(160, 30, 80, 0.2);
+
+    border: 2px solid #ffb1c9;
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+.music-box {
+    margin: 20px 0;
+}
+
+
+.music-btn {
+    background: #d41452;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(180, 20, 70, 0.3);
+}
+
+
+.music-btn:hover {
+    background: #a90d3e;
+}
+
+
+/* =========================================
+   PHOTOS
+========================================= */
+
+.photos {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+
+.photo {
+    width: 240px;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 5px solid white;
+
+    box-shadow:
+        0 8px 20px rgba(100, 20, 50, 0.25);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.photo:hover {
+    transform:
+        scale(1.06)
+        rotate(-2deg);
+}
+
+
+/* =========================================
+   LETTER
+========================================= */
+
+.letter {
+    text-align: left;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+
+    color: #542033;
+}
+
+
+.letter h2 {
+    text-align: center;
+
+    color: #d41452;
+
+    margin-bottom: 20px;
+}
+
+
+.signature {
+    text-align: right;
+
+    margin-top: 25px;
+
+    font-weight: bold;
+
+    color: #c0144d;
+}
+
+
+/* =========================================
+   FLOWER BOTTOM
+========================================= */
+
+.flower-bottom {
+    font-size: 65px;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    color: #8b3a55;
+}
+
+
+/* =========================================
+   FULLSCREEN PHOTO
+========================================= */
+
+.photo-viewer {
+    display: none;
+
+    position: fixed;
+
+    z-index: 100;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.photo-viewer img {
+    max-width: 90%;
+
+    max-height: 85%;
+
+    border-radius: 20px;
+}
+
+
+.close {
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 34px;
+    }
+
+
+    .flowers {
+        font-size: 60px;
+    }
+
+
+    .photo {
+        width: 90%;
+
+        height: 300px;
+    }
+
+
+    .letter {
+        font-size: 15px;
+    }
+
+}
